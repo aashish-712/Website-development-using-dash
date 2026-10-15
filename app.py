@@ -34,6 +34,7 @@ covid = pd.read_csv("covid_19_india.csv")
 covid_df = covid.groupby("Date")["Confirmed"].sum().reset_index()
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server= app.server
 
 app.layout = html.Div([
     html.H1("Corona Virus - India's Prespective", style= {"color": "#fff", "text-align": "center"}),
